@@ -16,8 +16,8 @@ def download_dataset():
 
 def split_dataset():
     df = pd.read_csv("lab1/dataset.csv")
-    os.makedirs("lab1/train")
-    os.makedirs("lab1/test")
+    os.makedirs("lab1/train", exist_ok=True)
+    os.makedirs("lab1/test", exist_ok=True)
     train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
     train_path = f'lab1/train/data.csv'
     test_path = f'lab1/test/data.csv'

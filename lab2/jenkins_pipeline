@@ -24,6 +24,30 @@ pipeline {
                 '''
             }
         }
+
+        stage('Fetch data') {
+            steps {
+                sh 'cd lab2 && python3 scripts/fetch_data.py'
+            }
+        }
+
+        stage('Preprocess') {
+            steps {
+                sh 'cd lab2 && python3 scripts/preprocess_data.py'
+            }
+        }
+
+        stage('Train model') {
+            steps {
+                sh 'cd lab2 && python3 scripts/train_model.py'
+            }
+        }
+
+        stage('Evaluate model') {
+            steps {
+                sh 'cd lab2 && python3 scripts/evaluate_model.py'
+            }
+        }
     }
 
     post {

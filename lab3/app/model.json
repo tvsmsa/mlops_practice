@@ -1,0 +1,35 @@
+{
+  "model_type": "NearestCentroidClassifier",
+  "feature_names": [
+    "sepal_length",
+    "sepal_width",
+    "petal_length",
+    "petal_width"
+  ],
+  "classes": [
+    "setosa",
+    "versicolor",
+    "virginica"
+  ],
+  "centroids": {
+    "setosa": [
+      4.95,
+      3.3833,
+      1.45,
+      0.2333
+    ],
+    "versicolor": [
+      6.3333,
+      2.9,
+      4.5333,
+      1.4167
+    ],
+    "virginica": [
+      6.6,
+      2.9833,
+      5.8333,
+      2.1
+    ]
+  },
+  "training_accuracy": 0.9444
+}

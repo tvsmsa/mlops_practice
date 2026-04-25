@@ -109,3 +109,8 @@ def predict(features: list[float], artifact: dict[str, Any]) -> dict[str, Any]:
             for class_name, distance in distances.items()
         },
     }
+
+if __name__ == "__main__":
+    artifact = train_and_save_model(MODEL_PATH)
+    print(f"Model saved to: {MODEL_PATH}")
+    print(f"Training accuracy: {artifact['training_accuracy']:.4f}")

@@ -28,3 +28,11 @@ pip install --upgrade -r requirements.txt
 python -m app.train_model
 
 uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+
+#Для запуска Docker
+
+docker build -t iris_microservice . 
+
+docker run -d --name iriscontainer -p 8000:8000 iris_microservice
+
+После этого микросервис доступен по адресу http://localhost:8000/

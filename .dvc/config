@@ -1,4 +1,5 @@
 [core]
-    remote = dvcremote
-['remote "dvcremote"']
-    url = gdrive://1q370EVsYIjuw9QQNUnrKAEHABuACBmIm/lab
+    remote = myremote
+['remote "myremote"']
+    url = s3://vkr-bucket/lab4
+    endpointurl = https://storage.yandexcloud.net

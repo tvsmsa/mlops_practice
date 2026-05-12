@@ -1,0 +1,5 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = s3://vkr-bucket/lab4
+    endpointurl = https://storage.yandexcloud.net
